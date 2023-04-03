@@ -10,6 +10,7 @@ export default {
       BLUE_100: "#00B2CA",
       BLUE_300: "#1D4E89",
       BLUE_400: "#0E2F58",
+      BLUE_500: "#0E2F58",
   
       RED: "#FF002E"
     }

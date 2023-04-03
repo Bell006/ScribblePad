@@ -12,6 +12,8 @@ export const Container = styled.section`
         margin-bottom: 2.4rem;
         
         font-size: 2rem;
-        font-weight: 400;
+        font-weight: 600;
+
+        color: ${({ theme }) => theme.COLORS.BLUE_500};
     }
 `;

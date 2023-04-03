@@ -6,45 +6,83 @@ export const Container = styled.div`
 
     display: grid;
     grid-template-columns: 25rem auto;
-    grid-template-rows: 10.5rem 12.8rem auto 6.4rem;
+    grid-template-rows: 10.5rem 12.8rem auto 8rem;
     grid-template-areas:
     "header header"
     "menu search"
     "menu content"
-    "menu content";
+    "newnote content";
+
+    
 `;
 
 export const Menu = styled.ul`
     grid-area: menu;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1.5rem;
     
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-    border-radius: 2.2rem;
+    background: ${({ theme }) => theme.COLORS.WHITE};
+    border-radius: 2.2rem 2.2rem 0 0;
     
-    margin: 1.5rem;
+    margin: 1rem 1.5rem 0;
+
+    > h1 {
+        margin: 2rem .5rem;
+        font-size: 2.6rem;
+
+        display: flex;
+        align-items: center;
+
+        padding: 1.2rem 0;
+        
+    }
+
+    > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+
+        align-items: center;
+    }
 `;
 
 export const Search = styled.div`
     grid-area: search;
+    padding: .5rem 4.5rem 0;
 `;
 
 export const Content = styled.div`
     grid-area: content;
+
+    margin-top: 2.5rem;
+    padding: .5rem 4.5rem 0;
+    
+    > main {
+        max-height: 60vh;
+        overflow-y: auto;
+
+        padding-right: .8rem;
+    }
 `;
 
 export const NewNote = styled.button`
+    grid-area: newnote;
     background-color: red;
-    width: 80%;
-    height: 10%;
 
-    align-self: end;
-    margin-bottom: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 1.5rem 1rem;
 
     border: none;
     background: ${({ theme }) => theme.COLORS.BLUE_400};
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 18px;
+    border-radius: 0 0 2.2rem 2.2rem;
 
     font-style: normal;
     font-weight: 400;

@@ -1,8 +1,9 @@
 import { Container } from "./styles";
 
-export function ButtonText({ title, ...rest}) {
+export function ButtonText({ title, color, ...rest}) {
     return (
         <Container
+            style={{ color }}
             type="button"
             {...rest}
         >
