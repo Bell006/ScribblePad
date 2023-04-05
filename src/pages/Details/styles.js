@@ -15,7 +15,7 @@ export const Container = styled.div`
         overflow-y: scroll;
         padding: 6.4rem 0;
 
-        background-color: ${({ theme }) => theme.COLORS.WHITE};;
+        background-color: ${({ theme }) => theme.COLORS.WHITE};
     }
 `;
 
@@ -26,7 +26,7 @@ export const Links = styled.ul`
         margin-top: 1.2rem;
 
         a {
-            color: ${({ theme }) => theme.COLORS.GREY}
+            color: ${({ theme }) => theme.COLORS.GREY};
         }
     }
 

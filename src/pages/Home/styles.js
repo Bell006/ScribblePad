@@ -34,6 +34,7 @@ export const Menu = styled.ul`
 
         display: flex;
         align-items: center;
+        gap: .5rem;
 
         padding: 1.2rem 0;
         
