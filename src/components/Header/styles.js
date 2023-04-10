@@ -67,4 +67,5 @@ export const Logout = styled.button`
         color: ${({ theme }) => theme.COLORS.BLUE_400};
         font-size: 2.4rem;
     }
+
 `;
