@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.input`
+export const Container = styled.div`
     display: flex;
     align-items: center;
 
@@ -24,14 +24,23 @@ export const Container = styled.input`
 
         padding: 1.2rem;
 
-        color: ${({ theme}) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.BLUE_300};
         background: transparent;
 
         border: none;
 
         &::placeholder {
-            color: ${({ theme}) => theme.COLORS.GREY};
+            color: ${({ theme }) => theme.COLORS.GREY};
         }
     }
+
+    .button-delete {
+        color: ${({ theme }) => theme.COLORS.RED};
+    }
+
+    .button-add {
+        color: ${({ theme }) => theme.COLORS.GREEN};
+    }
+
 
 `;

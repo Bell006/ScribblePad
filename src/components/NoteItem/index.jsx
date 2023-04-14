@@ -1,4 +1,4 @@
-import { FiX } from 'react-icons/fi';
+import { MdOutlineClose } from 'react-icons/md';
 import { AiOutlinePlus } from 'react-icons/ai';
 
 import { Container } from '../NoteItem/styles';
@@ -15,8 +15,9 @@ export function NoteItem({ isNew, value, onClick, ...rest}) {
             <button
                 type='button'
                 onClick={onClick}
+                className={isNew ? 'button-add' : 'button-delete'}
             >
-                { isNew ? <AiOutlinePlus /> : <FiX />}
+                { isNew ? <AiOutlinePlus /> : <MdOutlineClose />}
             </button>
         </Container>
       );
