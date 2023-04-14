@@ -2,6 +2,7 @@ import { Container, Form, Background } from "./styles";
 
 import backgroundTarget from "../../assets/Target.png"
 
+import { Link } from "react-router-dom";
 
 import { BiLock, BiUser } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -43,7 +44,9 @@ export function SignUp() {
 
                 <Button title="Entrar"></Button>
 
-                <a href="#">Voltar para tela de login</a>
+                <Link to="/">
+                Voltar para tela de login
+                </Link>
             </Form>
 
         </Container>

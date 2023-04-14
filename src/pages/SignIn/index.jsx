@@ -2,6 +2,7 @@ import { Container, Form, Background } from "./styles";
 
 import backgroundNote from "../../assets/Note.png"
 
+import { Link } from "react-router-dom";
 
 import { BiLock } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
@@ -34,7 +35,9 @@ export function SignIn() {
                 <Button title="Entrar"></Button>
 
                 <p>Não possui cadastro?</p>
-                <a href="#">Criar conta</a>
+                <Link to="/register">
+                Criar conta
+                </Link>
             </Form>
 
             <Background>

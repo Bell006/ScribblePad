@@ -29,7 +29,7 @@ export function Home() {
             </ul>
         </Menu>
 
-        <NewNote>+ Criar Nota</NewNote>
+        <NewNote to="/newNote">+ Criar Nota</NewNote>
 
         <Search>
             <Section title="Pesquisar">

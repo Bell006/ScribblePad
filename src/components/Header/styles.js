@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 export const Container = styled.header`
     grid-area: header; //cabeçalho fixo
 
@@ -15,6 +17,17 @@ export const Container = styled.header`
 
     padding: 0 4rem;
 `;
+
+export const Brand = styled(Link)`
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.3rem;
+    line-height: 6.9rem;
+    text-align: center;
+
+    color: ${({ theme }) => theme.COLORS.BLUE_300};
+`; 
 
 export const LogoGreetings = styled.div`
         display: flex;
@@ -43,7 +56,7 @@ export const LogoGreetings = styled.div`
     }
 `
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
     align-items: center;
 
