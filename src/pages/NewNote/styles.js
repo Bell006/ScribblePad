@@ -10,9 +10,30 @@ export const Container = styled.div`
     "header"
     "content";
 
+
     main {
         grid-area: content;
         overflow-y: auto;
+
+        ::-webkit-scrollbar-track
+            {
+                border: 4px solid ${({ theme }) => theme.COLORS.BACKGROUND_800};
+                // border color does not support transparent on scrollbar
+                // border-color: transparent;
+                background-color: ${({ theme }) => theme.COLORS.WHITE};
+            }
+
+            ::-webkit-scrollbar
+            {
+                width: 10px;
+                background-color: #dfe6e9;
+            }
+
+            ::-webkit-scrollbar-thumb
+            {
+                background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+                border-radius: 10px;
+            }
     }
 
     .tags {

@@ -48,7 +48,6 @@ export function Home() {
                     ]
                     }}
                     />
-
             </main>
         </Content>
 
