@@ -5,9 +5,9 @@ export const Container = styled.button`
     padding: .7rem;
     text-align: left;
     
-    border: none;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-    color: ${({ theme }) => theme.COLORS.BLUE_400};
+    border:  ${({ theme, all }) => all  ? `2px solid ${theme.COLORS.BLUE_500}` : "none"};
+    background-color: ${({ theme, isActive }) => isActive  ? theme.COLORS.BLUE_500 : theme.COLORS.BACKGROUND_800};
+    color: ${({ theme, isActive }) => isActive  ? theme.COLORS.WHITE : theme.COLORS.BLUE_400};
 
     border-radius: 1rem;
 

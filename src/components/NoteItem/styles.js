@@ -5,7 +5,7 @@ export const Container = styled.div`
     align-items: center;
 
     background-color: ${({ theme, isNew }) => isNew ? "transparent" : theme.COLORS.WHITE};
-    color: ${({ theme}) => theme.COLORS.BLUE_300};
+    color: ${({ theme }) => theme.COLORS.BLUE_300};
 
     border:  ${({ theme, isNew }) => isNew ? `.1rem dashed ${ theme.COLORS.WHITE}` : "none"};
 

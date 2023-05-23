@@ -6,6 +6,10 @@ export function Note({data, ...rest}) {
         <Container {...rest}>
             <h1>{data.title}</h1>
 
+            <p>
+                {data.description}
+            </p>
+
             {
                 data.tags &&
                 <footer>

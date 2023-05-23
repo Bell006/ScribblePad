@@ -24,10 +24,16 @@ export const Container = styled.div`
             margin-left: 1rem;
         }
 
-        svg {
-            color: ${({ theme }) => theme.COLORS.BLUE_300};
-            font-size: 2.4rem;
+        > button {
+            background: none;
+            border: none;
+
+            svg {
+                color: ${({ theme }) => theme.COLORS.BLUE_300};
+                font-size: 2.4rem;
+            }
         }
+
     } 
 `;
 

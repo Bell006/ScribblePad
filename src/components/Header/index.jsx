@@ -1,7 +1,24 @@
 import { Container, Brand, Logout, Profile, LogoGreetings } from "./styles";
 import { ImExit } from "react-icons/im";
+import { useNavigate } from "react-router-dom";
+
+import { useAuth } from "../../hooks/auth";
+import { api } from '../../services/api';
+import placeHolderImg from "../../assets/avatar_placeholder.svg";
 
 export function Header() {
+    const { signOut, user } = useAuth();
+
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : placeHolderImg;
+
+    const navigate = useNavigate();
+
+    function handleSignOut() {
+        navigate("/");
+        signOut();
+    }
+
+
     return (
         <Container>
             <LogoGreetings>
@@ -10,17 +27,17 @@ export function Header() {
                 </Brand>
 
                 <div>
-                    <span>Bem-vindo,</span>
-                    <strong>Bell Amancio</strong>
+                    <span>Bem-vindo(a),</span>
+                    <strong>{user.name}</strong>
                 </div>
             </LogoGreetings>
             
             <Logout>
-                <Profile to="/profile">  
-                    <img src="https://github.com/bell006.png" alt="Foto do usuário" />
+                <Profile to="/users">  
+                    <img src={avatarUrl} alt={user.name} />
                 </Profile>
 
-                <ImExit></ImExit>
+                <ImExit onClick={handleSignOut}></ImExit>
             </Logout>
         </Container>
     );

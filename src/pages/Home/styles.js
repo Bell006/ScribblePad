@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -63,7 +64,7 @@ export const Content = styled.div`
     padding: .5rem 4.5rem 0;
     
     > main {
-        max-height: 60vh;
+        max-height: 55vh;
         overflow-y: auto;
 
         padding-right: .8rem;

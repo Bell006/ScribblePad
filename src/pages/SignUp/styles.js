@@ -4,6 +4,8 @@ export const Container = styled.div`
     height: 100vh;
 
     display: flex;
+    gap: 8rem;
+
     align-items: stretch;
     justify-content: center;
 `;
@@ -11,7 +13,6 @@ export const Container = styled.div`
 export const Form = styled.form`
     font-family: 'Roboto Slab';
     font-style: normal;
-    padding: 0 13.6rem;
 
     display: flex;
     flex-direction: column;
@@ -40,8 +41,6 @@ export const Background = styled.div`
     align-items: center;
 
     >img {
-        max-width: 100%;
-        min-width: 45rem;
-        padding:  0 2% 0 13.6rem;
+        width: 35rem;
     }
 `;
